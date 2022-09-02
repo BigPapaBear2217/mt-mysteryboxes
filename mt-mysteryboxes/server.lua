@@ -191,3 +191,31 @@ RegisterNetEvent('mt-mysteryboxes:server:RewardSuper', function()
         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[Config.Rewards['expenciveBox']['ShitItem4']], "add")
     end
 end)
+
+RegisterServerEvent('mt-mysteryboxes:server:removemystery_smallbox', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    Player.Functions.RemoveItem('mystery_smallbox', 1)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['mystery_smallbox'], "remove")
+end)
+
+RegisterServerEvent('mt-mysteryboxes:server:removemystery_mediumbox', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    Player.Functions.RemoveItem('mystery_mediumbox', 1)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['mystery_mediumbox'], "remove")
+end)
+
+RegisterServerEvent('mt-mysteryboxes:server:removemystery_bigbox', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    Player.Functions.RemoveItem('mystery_bigbox', 1)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['mystery_bigbox'], "remove")
+end)
+
+RegisterServerEvent('mt-mysteryboxes:server:removemystery_expensivebox', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    Player.Functions.RemoveItem('mystery_expensivebox', 1)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['mystery_expensivebox'], "remove")
+end)

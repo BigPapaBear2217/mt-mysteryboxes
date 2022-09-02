@@ -118,8 +118,7 @@ RegisterNetEvent('mt-mysteryboxes:client:AbrirPequena', function()
 
         DeleteEntity(obj)
 
-        TriggerServerEvent('QBCore:Server:RemoveItem', 'mystery_smallbox', 1)
-        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items['mystery_smallbox'], "remove")
+        TriggerServerEvent('mt-mysteryboxes:server:removemystery_smallbox')
 
         TriggerServerEvent('mt-mysteryboxes:server:RewardPequena')
     end)
@@ -151,9 +150,7 @@ RegisterNetEvent('mt-mysteryboxes:client:AbrirMedia', function()
 
         DeleteEntity(obj)
 
-        TriggerServerEvent('QBCore:Server:RemoveItem', 'mystery_mediumbox', 1)
-        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items['mystery_mediumbox'], "remove")
-
+        TriggerServerEvent('mt-mysteryboxes:server:removemystery_mediumbox')
         TriggerServerEvent('mt-mysteryboxes:server:RewardMedia')
     end)
 end)
@@ -184,8 +181,7 @@ RegisterNetEvent('mt-mysteryboxes:client:AbrirGrande', function()
 
         DeleteEntity(obj)
 
-        TriggerServerEvent('QBCore:Server:RemoveItem', 'mystery_bigbox', 1)
-        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items['mystery_bigbox'], "remove")
+        TriggerServerEvent('mt-mysteryboxes:server:removemystery_bigbox')
 
         TriggerServerEvent('mt-mysteryboxes:server:RewardGrande')
     end)
@@ -217,9 +213,7 @@ RegisterNetEvent('mt-mysteryboxes:client:AbrirSuper', function()
 
         DeleteEntity(obj)
 
-        TriggerServerEvent('QBCore:Server:RemoveItem', 'mystery_expensivebox', 1)
-        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items['mystery_expensivebox'], "remove")
-
+        TriggerServerEvent('mt-mysteryboxes:server:removemystery_expensivebox')
         TriggerServerEvent('mt-mysteryboxes:server:RewardSuper')
     end)
 end)
